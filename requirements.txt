@@ -1,0 +1,24 @@
+# API / app
+fastapi
+uvicorn[standard]
+scalar-fastapi
+
+# Validation / settings
+pydantic
+pydantic-settings
+python-dotenv
+
+# Database / migrations
+SQLAlchemy
+alembic
+psycopg2-binary
+
+# AI / LLM
+langchain-core
+langchain-cohere
+
+# Data seeding
+Faker
+
+# Testing
+pytest
