@@ -1,5 +1,5 @@
 from sqlalchemy import create_engine, text
-from sqlalchemy.orm import DeclarativeBase, sessionmaker
+from sqlalchemy.orm import sessionmaker
 from app.core.config import settings
 
 engine = create_engine(
@@ -9,9 +9,6 @@ engine = create_engine(
     max_overflow=10)
 
 SessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=False)
-
-class Base(DeclarativeBase):
-    pass
 
 def test_connection():
     with engine.connect() as conn:

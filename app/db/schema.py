@@ -4,13 +4,11 @@ from datetime import datetime, date
 from typing import Optional, List
 
 from sqlalchemy import String,Integer,Boolean,DateTime,Date,Numeric,ForeignKey,UniqueConstraint,func,text,Identity
-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
+from sqlalchemy.orm import Mapped, mapped_column, relationship
+
+from app.db.base import Base
 
 UTC_NOW = text("timezone('utc', now())")
-
-
-class Base(DeclarativeBase):
-    pass
 
 class Customer(Base):
     __tablename__ = "customers"
